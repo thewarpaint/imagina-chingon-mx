@@ -1,2 +1,3 @@
-# imaginemos-cosas-chingonas-mx
-Website for imaginemoscosaschingonas.mx
+# Imaginemos cosas chingonas dot mx
+
+Website for [imaginemoscosaschingonas.mx](http://imaginemoscosaschingonas.mx/)
