@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="Imaginemos cosas chingonas">
-    <meta name="description" content="Las estadísticas no ganan partidos. Los futbolistas sí. ¡Apoya a tu selección!">
+    <meta name="title" content="#imaginachingón">
+    <meta name="description" content="¡Imaginemos cosas chingonas!">
 
-    <link href="https://fonts.googleapis.com/css?family=Exo:300,600,800" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css" rel="stylesheet">
 
-    <title>Imaginemos cosas chingonas punto mx</title>
+    <title>#imaginachingón</title>
 
     <style type="text/css">
       html {
@@ -29,85 +29,98 @@
         }
       }
 
-      body, h1, p {
+      h1, h2, h3 {
         margin: 0;
       }
 
-      .hero, .brand {
+      .nav {
+        background-color: #ce1126; /* Mexico flag red */
+        color: #ffffff;
+        padding: 1rem;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+
+      .nav__brand {
+        font-size: 2.5rem;
+      }
+
+      .campaign {
+        margin-top: 2rem;
+        padding: 0 1rem;
+      }
+
+      .campaign__header {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .campaign__t-shirts {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      .t-shirt {
+        display: block;
+        flex: 0 0 50%;
+        margin-bottom: 3rem;
         text-align: center;
+        text-decoration: none;
+        color: #000000;
       }
 
-      .hero {
-        margin: 6rem 0;
+      @media (min-width: 640px) {
+        .t-shirt {
+          flex-basis: 33%;
+        }
       }
 
-      .hero__small {
+      .t-shirt--title {
         font-size: 1.5rem;
-        font-weight: 300;
+        margin: auto;
       }
 
-      .hero__big {
-        font-size: 3rem;
-        font-weight: 800;
+      .t-shirt--title , .t-shirt--thumbnail {
+        max-width: 90%;
       }
 
-      .hero--green .hero__big {
-        color: #006847; /* Mexico flag green */
-      }
-
-      .hero--red .hero__big {
-        color: #ce1126; /* Mexico flag red */
-      }
-
-      .hero__big, .brand {
-        font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-
-      .brand {
-        margin: 9rem 0;
-      }
-
-      .brand__line-1 {
-        line-height: 4rem;
-        font-size: 4rem;
-        font-weight: 300;
-        color: #006847; /* Mexico flag green */
-      }
-
-      .brand__line-2 {
-        line-height: 9rem;
-        font-size: 9rem;
-        font-weight: 800;
-      }
-
-      .brand__line-3 {
-        line-height: 5rem;
-        font-size: 5rem;
-        font-weight: 600;
-        color: #ce1126; /* Mexico flag red */
-      }
+      /* color: #006847; /* Mexico flag green */
+      /* color: #ce1126; /* Mexico flag red */
     </style>
   </head>
   <body class="body">
-    <h2 class="hero hero--green">
-      <p class="hero__small">las estadísticas no ganan partidos</p>
-      <p class="hero__big">los futbolistas sí</p>
-    </h2>
+    <nav class="nav">
+      <h1 class="nav__brand">#imaginachingón</h1>
+    </nav>
 
-    <h2 class="hero">
-      <p class="hero__small">las matemáticas no ganan campeonatos</p>
-      <p class="hero__big">la pasión sí</p>
-    </h2>
+    <section class="campaign">
+      <h2 class="campaign__header">16 de Septiembre</h2>
 
-    <h2 class="hero hero--red">
-      <p class="hero__small">los pesimistas no serán campeones del mundo</p>
-      <p class="hero__big">la selección sí</p>
-    </h2>
+      <div class="campaign__t-shirts">
+        <a href="#"
+           class="t-shirt">
+          <img src="images/t-shirt.jpeg"
+               class="t-shirt--thumbnail">
 
-    <h1 class="brand">
-      <p class="brand__line brand__line-1">imaginemos</p>
-      <p class="brand__line brand__line-2">cosas</p>
-      <p class="brand__line brand__line-3">chingonas</p>
-    </h1>
+          <h3 class="t-shirt--title">Mex I Can</h3>
+        </a>
+
+        <a href="#"
+           class="t-shirt">
+          <img src="images/t-shirt.jpeg"
+               class="t-shirt--thumbnail">
+
+          <h3 class="t-shirt--title">Mex I Can</h3>
+        </a>
+
+        <a href="#"
+           class="t-shirt">
+          <img src="images/t-shirt.jpeg"
+               class="t-shirt--thumbnail">
+
+          <h3 class="t-shirt--title">Mex I Can</h3>
+        </a>
+      </div>
+    </section>
   </body>
 </html>
