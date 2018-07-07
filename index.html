@@ -1,3 +1,8 @@
+---
+permalink: /
+---
+{%- assign campaigns = site.data.campaigns -%}
+
 <!DOCTYPE html>
 <html lang="es-mx">
   <head>
@@ -93,34 +98,23 @@
       <h1 class="nav__brand">#imaginachingón</h1>
     </nav>
 
+    {%- for campaignId in campaigns -%}
+    {%- assign campaign = campaignId[1] -%}
     <section class="campaign">
-      <h2 class="campaign__header">16 de Septiembre</h2>
+      <h2 class="campaign__header">{{ campaign.title }}</h2>
 
       <div class="campaign__t-shirts">
-        <a href="#"
+        {%- for tShirt in campaign.tShirts -%}
+        <a href="{{ tShirt.link }}"
            class="t-shirt">
-          <img src="images/t-shirt.jpeg"
+          <img src="{{ tShirt.thumbnailUrl }}"
                class="t-shirt--thumbnail">
 
-          <h3 class="t-shirt--title">Mex I Can</h3>
+          <h3 class="t-shirt--title">{{ tShirt.title }}</h3>
         </a>
-
-        <a href="#"
-           class="t-shirt">
-          <img src="images/t-shirt.jpeg"
-               class="t-shirt--thumbnail">
-
-          <h3 class="t-shirt--title">Mex I Can</h3>
-        </a>
-
-        <a href="#"
-           class="t-shirt">
-          <img src="images/t-shirt.jpeg"
-               class="t-shirt--thumbnail">
-
-          <h3 class="t-shirt--title">Mex I Can</h3>
-        </a>
+        {%- endfor -%}
       </div>
     </section>
+    {%- endfor -%}
   </body>
 </html>
