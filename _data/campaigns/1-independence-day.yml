@@ -6,7 +6,18 @@ tShirts:
     link: https://imaginachingon.threadless.com/designs/canta-y-no-llores-texto-blanco/
   - title: No corro. No grito. No empujo. No lloro. Canto.
     thumbnail: earthquake-instructions--black-on-white
-    link: https://imaginachingon.threadless.com/designs/no-corro-no-grito-no-empujo-no-lloro-canto-texto-negro/
+    link: /playeras/no-corro-no-grito-no-empujo-no-lloro-canto-texto-negro/
+    stores:
+      - name: Threadless
+        price: Desde USD 15.95 más envío
+        link: https://imaginachingon.threadless.com/designs/no-corro-no-grito-no-empujo-no-lloro-canto-texto-negro/
+        description: Estados Unidos, resto del mundo
+        logoUrl: threadless-logo--cyan.png
+      - name: Redbubble
+        price: Desde USD 15.95 más envío
+        link: https://www.redbubble.com/people/imaginachingon/works/32555676-mex-i-can-texto-blanco/
+        description: Europa, Estados Unidos, resto del mundo
+        logoUrl: redbubble-logo.png
   - title: MEX I CAN
     thumbnail: mex-i-can--red-on-grey
     link: https://imaginachingon.threadless.com/designs/mex-i-can-texto-rojo-tela-blanca/

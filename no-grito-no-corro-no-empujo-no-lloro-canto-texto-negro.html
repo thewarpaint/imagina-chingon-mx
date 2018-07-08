@@ -1,0 +1,48 @@
+---
+permalink: /playeras/no-corro-no-grito-no-empujo-no-lloro-canto-texto-negro/
+---
+{%- assign campaigns = site.data.campaigns -%}
+{%- assign tShirt = campaigns["1-independence-day"].tShirts[1] -%}
+
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="#imaginachingón">
+    <meta name="description" content="¡Adquiere tu playera y demuestra tu pasión por México!">
+
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css" rel="stylesheet">
+    <link href="{{ site.url }}/css/main.css" rel="stylesheet">
+    <link href="{{ site.url }}/manifest.json" rel="manifest">
+
+    <title>#imaginachingón 🇲🇽</title>
+  </head>
+
+  <body class="body">
+    {%- include header.html -%}
+    {%- include nav.html -%}
+
+    <h2 class="">{{ tShirt.title }}</h2>
+
+    <div>
+      <img src="{{ site.url }}/images/processed/{{ tShirt.thumbnail }}_364px.jpg"
+           srcset="{{ site.url }}/images/processed/{{ tShirt.thumbnail }}_728px.jpg 2x"
+           class="t-shirt--thumbnail"
+           alt="Playera: {{ tShirt.title }}">
+    </div>
+
+    <ul>
+      {%- for store in tShirt.stores -%}
+      <li>
+        <a href="{{ store.link }}">
+          <img src="{{ site.url }}/images/{{ store.logoUrl }}"
+               alt="{{ store.name }}">
+          <p>{{ store.description }}</p>
+          <p>{{ store.price }}</p>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </body>
+</html>
