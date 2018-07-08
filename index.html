@@ -23,16 +23,7 @@ permalink: /
       <h1 class="header__brand">#imaginachingón 🇲🇽</h1>
     </header>
 
-    <nav class="nav">
-      <ul class="nav__list">
-        {%- for campaignEntry in campaigns -%}
-        <li class="nav__entry">
-          <a class="nav__link"
-             href="#{{ campaignEntry[0] }}">{{ campaignEntry[1].title }}</a>
-        </li>
-        {%- endfor -%}
-      </ul>
-    </nav>
+    {%- include nav.html -%}
 
     {%- for campaignEntry in campaigns -%}
     {%- assign campaign = campaignEntry[1] -%}

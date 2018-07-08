@@ -1,0 +1,11 @@
+{%- assign campaigns = site.data.campaigns -%}
+<nav class="nav">
+  <ul class="nav__list">
+    {%- for campaignEntry in campaigns -%}
+    <li class="nav__entry">
+      <a class="nav__link"
+         href="{{ site.url }}/#{{ campaignEntry[0] }}">{{ campaignEntry[1].title }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</nav>
