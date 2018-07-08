@@ -1,0 +1,10 @@
+{
+  "short_name": "#imaginachingón",
+  "name": "#imaginachingón",
+  "icons": [],
+  "start_url": "index.html",
+  "display": "browser",
+  "orientation": "portrait-primary",
+  "background_color": "#ce1126",
+  "theme_color": "#ce1126"
+}
