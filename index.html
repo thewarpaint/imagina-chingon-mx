@@ -93,6 +93,7 @@ permalink: /
       /* color: #ce1126; /* Mexico flag red */
     </style>
   </head>
+
   <body class="body">
     <nav class="nav">
       <h1 class="nav__brand">#imaginachingón</h1>
@@ -107,8 +108,15 @@ permalink: /
         {%- for tShirt in campaign.tShirts -%}
         <a href="{{ tShirt.link }}"
            class="t-shirt">
-          <img src="{{ tShirt.thumbnailUrl }}"
-               class="t-shirt--thumbnail">
+          <picture>
+            <source media="(max-width: 480px)"
+                    srcset="images/processed/{{ tShirt.thumbnail }}_182px.jpg,
+                            images/processed/{{ tShirt.thumbnail }}_364px.jpg 2x">
+
+            <img src="images/processed/{{ tShirt.thumbnail }}_364px.jpg"
+                 srcset="images/processed/{{ tShirt.thumbnail }}_728px.jpg 2x"
+                 class="t-shirt--thumbnail">
+          </picture>
 
           <h3 class="t-shirt--title">{{ tShirt.title }}</h3>
         </a>
