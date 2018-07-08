@@ -38,15 +38,16 @@ permalink: /
         margin: 0;
       }
 
-      .nav {
+      .header {
         background-color: #ce1126; /* Mexico flag red */
         color: #ffffff;
+        border-bottom: 1px solid #ffffff;
         padding: 1rem;
         font-weight: normal;
         font-size: 1rem;
       }
 
-      .nav__brand {
+      .header__brand {
         font-size: 2.5rem;
       }
 
@@ -94,8 +95,11 @@ permalink: /
   </head>
 
   <body class="body">
+    <header class="header">
+      <h1 class="header__brand">#imaginachingón</h1>
+    </header>
+
     <nav class="nav">
-      <h1 class="nav__brand">#imaginachingón</h1>
     </nav>
 
     {%- for campaignId in campaigns -%}
