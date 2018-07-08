@@ -34,7 +34,7 @@ permalink: /
         }
       }
 
-      h1, h2, h3 {
+      h1, h2, h3, ul {
         margin: 0;
       }
 
@@ -49,6 +49,26 @@ permalink: /
 
       .header__brand {
         font-size: 2.5rem;
+      }
+
+      .nav {
+        background-color: #ce1126; /* Mexico flag red */
+        color: #ffffff;
+        padding: 1rem;
+      }
+
+      .nav__list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .nav__entry {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      .nav__link {
+        color: #ffffff;
       }
 
       .campaign {
@@ -100,11 +120,20 @@ permalink: /
     </header>
 
     <nav class="nav">
+      <ul class="nav__list">
+        {%- for campaignEntry in campaigns -%}
+        <li class="nav__entry">
+          <a class="nav__link"
+             href="#{{ campaignEntry[0] }}">{{ campaignEntry[1].title }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
     </nav>
 
-    {%- for campaignId in campaigns -%}
-    {%- assign campaign = campaignId[1] -%}
-    <section class="campaign">
+    {%- for campaignEntry in campaigns -%}
+    {%- assign campaign = campaignEntry[1] -%}
+    <section class="campaign"
+             id="{{ campaignEntry[0] }}">
       <h2 class="campaign__header">{{ campaign.title }}</h2>
 
       <div class="campaign__t-shirts">
