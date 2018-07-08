@@ -81,6 +81,10 @@ permalink: /
         margin-bottom: 1rem;
       }
 
+      .campaign__subtitle {
+        font-size: 1.5rem;
+      }
+
       .campaign__t-shirts {
         display: flex;
         flex-flow: row wrap;
@@ -134,7 +138,8 @@ permalink: /
     {%- assign campaign = campaignEntry[1] -%}
     <section class="campaign"
              id="{{ campaignEntry[0] }}">
-      <h2 class="campaign__header">{{ campaign.title }}</h2>
+      <h2 class="campaign__header">{{ campaign.title }}
+        <span class="campaign__subtitle">{{ campaign.subtitle }}</span></h2>
 
       <div class="campaign__t-shirts">
         {%- for tShirt in campaign.tShirts -%}
